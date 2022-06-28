@@ -3,7 +3,8 @@ package Constructers;
 public class Number {
 
     int x;
-    public Number(){
+
+    public Number() {
         x = 5;
     }
 

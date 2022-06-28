@@ -6,14 +6,19 @@ public class MyDateTest {
         date.setMonth(2);
         date.setYear(2022);
         date.setDay(29);
-        System.out.println("나의 생일은 "+date.getYear()+"년 "+ date.getMonth()+"월 "+date.getDay()+"일 입니다");
+        System.out.println("나의 생일은 " + date.getYear() + "년 " + date.getMonth() + "월 " + date.getDay() + "일 입니다");
 
-        byte b = 10;
-        char c = 'a';
+        short s =0;
+        byte b =0;
+        int i =10000000;
+        long l =0l;
+        float f =0.0f;
+        double d =0.0;
+        char c = 'c';
+        d = (double)c;
+        b = (byte)i;
 
-        float f = c;
-
-
+        System.out.println(b);
 
     }
 }

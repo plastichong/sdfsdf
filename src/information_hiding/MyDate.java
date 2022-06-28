@@ -6,16 +6,16 @@ public class MyDate {
     private int year;
 
     public void setDay(int day) {
-            if((year%4 == 0 && year%100 != 0) || year%400 == 0) {
-                    if (month == 2  && (day < 1 || 28 < day)) {
-                    System.out.println("윤년입니다");
-                    this.day = day;
-                    }
-            }else if(month == 2 && (day < 1 || 28 < day)){
-                System.out.println("날짜 오류 : "+year+"년은 윤년이 아닙니다");
-            }else if(month != 2){
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            if (month == 2 && (day < 1 || 28 < day)) {
+                System.out.println("윤년입니다");
                 this.day = day;
             }
+        } else if (month == 2 && (day < 1 || 28 < day)) {
+            System.out.println("날짜 오류 : " + year + "년은 윤년이 아닙니다");
+        } else if (month != 2) {
+            this.day = day;
+        }
 
 
     }
