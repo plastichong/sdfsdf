@@ -11,7 +11,7 @@ class Person{
         this.age = age;
     }
     Person returnItSelf(){ //Person은 자료형(객체)
-        return this;        //객체 (여기서는this)를 반환함
+        return this;        //this (여기서는 객체)를 반환함
     }
     public void setName(String name) {
         this.name = name;

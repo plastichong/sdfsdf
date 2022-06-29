@@ -22,11 +22,15 @@ public class CalendarEx {
         System.out.println(hour+" 시 "+minute+" 분 "+second+" 초");
 
         int day = c.get(Calendar.DAY_OF_WEEK);
+
+        long time = c.getTimeInMillis();
         System.out.println(day);//1==일 2==월 3==화
 
         UsingDefine my = new UsingDefine();
         int age = my.GIRL_FRIEND_AGE;
 //        System.out.println(UsingDefine.GIRL_FREIND_AGE);
         System.out.println(age);
+        System.out.println(time+"ms");
+        System.out.println(time/1000+"s");
     }
 }
