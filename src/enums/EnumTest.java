@@ -28,5 +28,16 @@ public class EnumTest {
                 break;
         }
 
+        LoginResultEnum result = LoginResultEnum.FAIL_ID;
+
+        if (result == LoginResultEnum.SUCCESS) {
+            System.out.println("로그인 성공");
+        } else if (result == LoginResultEnum.FAIL_ID) {
+            System.out.println("로그인 실패 ID 오류");
+        } else if (result == LoginResultEnum.FAIL_PASSWORD) {
+            System.out.println("로그인 실패 PASSWORD 오류");
+        }
+
+
     }
 }

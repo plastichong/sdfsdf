@@ -38,7 +38,9 @@ public class EnumWeek {
             System.out.println("일요일에는 영화를 보러 갑니다.");
         }else {
             System.out.println("열심히 코딩합니다.");
+
         }
+
 
 
     }
