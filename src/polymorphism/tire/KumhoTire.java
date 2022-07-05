@@ -1,9 +1,9 @@
 package polymorphism.tire;
 
-public class KumhoTire extends Tire{
+public class KumhoTire extends Tire {
 
-    int maxRotation = 10;
-    public KumhoTire(String location ) {
-        super(location);
+    public KumhoTire(String location, int maxRotation) {
+        super(location, maxRotation);
     }
+
 }
