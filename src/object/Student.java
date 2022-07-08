@@ -9,7 +9,7 @@ public class Student {
         this.studentNum = studentNum;
     }
 
-    @Override
+    @Override   //equals 재정의 why?
     public boolean equals(Object obj) {
         if (obj instanceof Student) {
             Student student = (Student) obj;
