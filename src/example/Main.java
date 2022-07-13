@@ -10,20 +10,31 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int H = sc.nextInt();
-        int M = sc.nextInt();
-        if ((M - 45) < 0) {
-            H--;
-            int resultM = (M - 45);
-            M = 60;
-            M = M - Math.abs(resultM);
-            if (H < 0) {
-                H = 23;
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+
+        int AH = A;
+        int AM = B;
+
+        if ((B + C) >= 60) {
+            AM = (B + C);
+            if(AM%60==0){
+               AH += AM/60;
+               AM = 0;
+            }
+            if(AM%60!=0&&AM>60){
+               AM = AM-60;
+               AH++;
 
             }
-            System.out.println(H + " " + M);
+//
+            if (AH >= 24) {
+                AH = 0;
+            }
+            System.out.println(AH + " " + AM);
         }else {
-            System.out.println(H + " " + (M-45));
+            System.out.println(AH + " " + (AM+C));
         }
 
 
