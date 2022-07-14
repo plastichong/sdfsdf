@@ -9,7 +9,6 @@ public class MyQueueTest {
         queue.enQueue("wee3");
 
         System.out.println("자료 사이즈 : "+queue.getArrayQueue().size());
-        System.out.println("자료 사이즈 : "+queue.getArrayQueue().);
 
         System.out.println("첫 번째 꺼내옴 :"+queue.deQueue());
         System.out.println("두 번째 꺼내옴 :"+queue.deQueue());
