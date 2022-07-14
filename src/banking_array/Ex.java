@@ -1,12 +1,10 @@
-package banking;
+package banking_array;
 
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
 
-public class Ex{
+
+public class Ex {
     public static void main(String[] args){
         int totalEmployee = 0;
         int upNum = 0;
@@ -36,6 +34,7 @@ public class Ex{
 
 class Company{
     private HashMap<Integer, Employee> employeeList = new HashMap<Integer, Employee>();
+    private HashMap<Integer, Integer> nodeLevelList = new HashMap<Integer, Integer>();
     private int maxNodeLevel = 0;
     private int maxNodeEmployeeNumber = 0;
     private int[] upNumList;
@@ -73,11 +72,9 @@ class Company{
         int sulplusEmployeeCount = 0;
 
         for(int i=maxNodeLevel; i>0; i--){
-            for(Entry<Integer, Employee> entrySet: employeeList.entrySet()){
-                if(entrySet.getValue().getNodeLevel() == i){
-                    employeeCount++;
-                }
-            }
+
+            employeeCount = nodeLevelList.get(i);
+
             if(i==maxNodeLevel){
                 needEmployeeCount = employeeCount;
             }else{
@@ -109,12 +106,16 @@ class Company{
                 }
 
             }
-            employeeCount = 0;
         }
         return needEmployeeCount;
     }
 
     private void setMaxNodeLevel(int nodeLevel){
+        if(nodeLevelList.containsKey(nodeLevel)){
+            nodeLevelList.put(nodeLevel, nodeLevelList.get(nodeLevel) + 1);
+        }else{
+            nodeLevelList.put(nodeLevel,1);
+        }
         if(this.maxNodeLevel < nodeLevel){
             this.maxNodeLevel = nodeLevel;
         }
@@ -143,7 +144,7 @@ class Employee{
         return nodeLevel;
     }
 
-    public void setNodeLevel(int nodeLvel){
+    public void setNodeLevel(int nodeLevel){
         this.nodeLevel=nodeLevel;
     }
 }

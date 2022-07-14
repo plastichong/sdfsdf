@@ -1,4 +1,7 @@
 package collection.member;
+
+import java.util.Objects;
+
 //VO
 public class Member {
     private int memberId;
@@ -31,5 +34,27 @@ public class Member {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return memberId == member.memberId && Objects.equals(memberName, member.memberName);
+    }
 
+//    public boolean equals(Object o){
+//       if (o instanceof Member){
+//           Member member = (Member) o;
+//           if (member.memberId == this.memberId){
+//               return true;
+//           }else {return false;}
+//       }
+//        return false;
+//    }
+
+
+    @Override
+    public int hashCode() {
+        return memberId;
+    }
 }

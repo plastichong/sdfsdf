@@ -1,8 +1,8 @@
-package banking;
+package banking_array;
 
 import java.util.Scanner;
 
-public class Main {
+public class ArrayMain {
     private static Account[] accountArray = new Account[100];
     private static Scanner sc = new Scanner(System.in);
 

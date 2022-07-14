@@ -1,4 +1,4 @@
-package banking;
+package banking_arraylist;
 
 
 public class Account {
