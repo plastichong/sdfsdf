@@ -1,0 +1,21 @@
+package thread;
+
+import java.awt.*;
+
+public class BeepTask implements Runnable{
+    @Override
+    public void run() {
+
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+
+        for (int i = 0; i <5 ; i++) {
+            toolkit.beep();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+    }
+}
