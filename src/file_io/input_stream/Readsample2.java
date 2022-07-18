@@ -11,16 +11,26 @@ public class Readsample2 {
         InputStream is = null;
 
         try {
-            is = new FileInputStream("C:/File/test1.db");
-            byte[] buffer = new byte[100];
-            int data;
+//            is = new FileInputStream("C:/File/test1.db");
+//            byte[] buffer = new byte[100];
+//            int data;
+//
+//            while ((data = is.read(buffer)) != -1) {
+//                for (int i = 0; i < data; i++) {
+//                    System.out.println(buffer[i]);
+//                }
+//
+//            }
 
-            while ((data = is.read(buffer)) != -1) {
-                for (int i = 0; i < data; i++) {
-                    System.out.println(buffer[i]);
+            while(true){
+                int data = is.read();
+                if(data == -1)break;
+                for (int i = 0; i < data ; i++) {
+                    System.out.println();
                 }
-
             }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
