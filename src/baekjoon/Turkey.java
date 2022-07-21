@@ -1,14 +1,11 @@
-package example;
+package baekjoon;
 
-import java.text.SimpleDateFormat;
-import java.time.Year;
-import java.util.Calendar;
-import java.util.Date;
+
 import java.util.Scanner;
 
-public class Main {
+public class Turkey {
     public static void main(String[] args) {
-        while (true) {
+
 
             Scanner sc = new Scanner(System.in);
             int A = sc.nextInt();
@@ -19,7 +16,8 @@ public class Main {
 
             if ((B + C) >= 60) {
 
-                AM = (B + C);
+                AM = (B + C)%60;
+                AH += (B+C)/60;
 
                 if (AM % 60 == 0) {
                     AH += AM / 60;
@@ -39,6 +37,5 @@ public class Main {
             } else {
                 System.out.println(AH + " " + (AM + C));
             }
-        }
     }
 }
