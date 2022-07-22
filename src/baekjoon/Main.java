@@ -1,19 +1,28 @@
 package baekjoon;
 
-import java.util.Scanner;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int T = sc.nextInt();
-        for (int i = 1; i <= T ; i++) {
-            int A = sc.nextInt();
-            int B = sc.nextInt();
-            String str = "Case #"+i+": ";
-            System.out.println(str+(A+B));
+        int T = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < T; i++) {
+            String[] strarr = br.readLine().split(" ");
+
+
+            int A = Integer.parseInt(strarr[0]);
+            int B = Integer.parseInt(strarr[1]);
+            if (A + B != 0) {
+                System.out.println(A + B);
+            }
         }
+
 
     }
 }
